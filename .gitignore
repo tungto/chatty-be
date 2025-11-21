@@ -1,0 +1,47 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+.env
+.DS_Store # macOS specific
+.idea/ # WebStorm/IntelliJ specific
+.vscode/ # VS Code specific (excluding settings that might be useful)
+.project
+.classpath
+.settings/
+
+# Build artifacts
+dist/
+build/
+coverage/
+tmp/
+temp/
+
+# Test results
+junit.xml
+test-results.xml
+
+# Editor specific files
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.bak
+
+# OS generated files
+Thumbs.db # Windows specific
+ehthumbs.db # Windows specific
+.DS_Store # macOS specific
+
+# Miscellaneous
+pids/
+*.pid
+*.seed
+*.sock
