@@ -6,14 +6,11 @@
     "outDir": "./build",
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
+    "module": "commonjs",
     "target": "es2015",
     // For nodejs:
-    "lib": [
-      "DOM",
-      "es2015"
-    ],
-     "types": ["node"],
+    "lib": ["DOM", "es2015"],
+    "types": ["node"],
     // and npm install -D @types/node
 
     "baseUrl": ".",
@@ -42,7 +39,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-//    "verbatimModuleSyntax": true,
+    //    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",

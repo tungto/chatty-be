@@ -1,11 +1,4 @@
-import {
-  Application,
-  urlencoded,
-  json,
-  Response,
-  Request,
-  NextFunction,
-} from "express";
+import { Application, json, urlencoded } from "express";
 import http from "http";
 import cookieSession from "cookie-session";
 import helmet from "helmet";
@@ -29,6 +22,7 @@ export class ChattyServer {
     this.standardMiddleware(this.app);
     this.routesMiddleware(this.app);
     this.globalErrorHandler(this.app);
+    this.startServer(this.app);
   }
 
   private securityMiddleware(app: Application): void {
@@ -63,7 +57,14 @@ export class ChattyServer {
 
   private globalErrorHandler(app: Application): void {}
 
-  private startServer(port: number): void {}
+  private startServer(app: Application): void {
+    try {
+      const httpServer: http.Server = new http.Server(app);
+      this.startHttpServer(httpServer);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   private createSocketServer(httpServer: http.Server): void {}
 
